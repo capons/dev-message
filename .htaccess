@@ -1,0 +1,34 @@
+Options -Indexes
+Options +FollowSymLinks
+
+# Set the default file for indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+
+    # activate URL rewriting
+    RewriteEngine on
+
+    # if coming from the load balancer make sure they are going over HTTPS
+    RewriteCond %{HTTP_HOST} ^api\.clout\.com [NC]
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule (.*) https://api.clout.com/$1 [R=301,L]
+
+    # do not rewrite links to the documentation, assets and public files
+    RewriteCond $1 !^(404\.html|index\.html|images|assets|uploads|captcha)
+
+    # do not rewrite for php files in the document root, robots.txt or the maintenance page
+    RewriteCond $1 !^([^\..]+\.php|robots\.txt)
+
+    # but rewrite everything else
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+
+    ErrorDocument 404 404.html
+
+</IfModule>

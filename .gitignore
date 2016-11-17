@@ -1,0 +1,62 @@
+# System .gitignore settings
+# ------------------------------------
+application/logs/
+*.exe
+config_env.php
+deploy.php
+copy.php
+tag.php
+_notes/
+
+
+
+# Default IDE Files to Ignore
+
+# ------------------------------------
+# Eclipse
+# ------------------------------------
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+
+
+
+
+
+
+
+
+
+# -------------------------------------------------------
+# -------------------------------------------------------
+# TODO: Add your IDE .gitignore settings above this line
+# in the format:
+
+# ------------------------------------
+# Your IDE
+# ------------------------------------
+# .gitignore settings here
+

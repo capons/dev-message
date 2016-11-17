@@ -1,0 +1,212 @@
+<?php
+/*
+ * This document includes global environment-specific settings
+ *
+ */
+ 
+ 
+/*
+ *---------------------------------------------------------------
+ * GLOBAL SETTINGS
+ *---------------------------------------------------------------
+ */
+	define('ENVIRONMENT', 'testing');
+	
+	define('SECURE_MODE', FALSE);
+	
+	define('BASE_URL', 'http://sta-ms-msg1.clout.com/main.php');
+		
+	define('IAM_SERVER_URL', 'http://sta-sc-iam1.clout.com/main.php'); # IAM URL
+	
+	define('CRON_SERVER_URL', 'http://sta-dw-crn1.clout.com/main/index'); # CRON URL
+	
+	define('RETRIEVE_URL_DATA_IGNORE', 3);#The starting point to obtain the passed url data
+	
+	define("MINIFY", FALSE);
+	
+	define('PORT_HTTP', '80');
+  
+  	define('PORT_HTTP_SSL', '443');
+	
+	define('PHP_LOCATION', "php5");
+
+ 	define('ENABLE_PROFILER', FALSE); # See perfomance stats based on set benchmarks
+
+
+
+
+
+/*
+ *---------------------------------------------------------------
+ * API SETTINGS
+ *---------------------------------------------------------------
+ */
+
+	define('API_URL', 'http://sta-be-prc1.clout.com/');
+	
+	define('API_PUBLIC_URL', 'http://sta-be-prc1.clout.com/');
+		
+	define('API_KEY', 'xt9487593-234u78i345345k-rt845k45p234');
+	
+	
+
+
+/*
+ *---------------------------------------------------------------
+ * QUERY CACHE SETTINGS
+ *---------------------------------------------------------------
+ */
+ 	
+	define('ENABLE_QUERY_CACHE', FALSE); 
+
+	
+
+
+/*
+ *---------------------------------------------------------------
+ * MESSAGE SETTINGS
+ *---------------------------------------------------------------
+ */
+ 	
+	define('ENABLE_MESSAGE_CACHE', FALSE); 
+	
+	define('INVITATION_SERVER_URL', 'http://sta-ms-inv1.clout.com/main.php');
+ 	
+	
+
+
+/*
+ *---------------------------------------------------------------
+ * SMS CREDENTIALS
+ *---------------------------------------------------------------
+ */
+ 	
+	define('SMS_GLOBAL_USERNAME', 'sms-global-api-user'); 
+ 	
+ 	define('SMS_GLOBAL_PASSWORD', 'sms-global-api-pass'); 
+ 	
+ 	define('SMS_GLOBAL_VERIFIED_SENDER', 'verified-phone-number-with-country-code'); 
+ 
+ 
+ 	
+
+
+/*
+ *---------------------------------------------------------------
+ * AMAZON S3 BUCKET SETTINGS
+ *---------------------------------------------------------------
+ */
+ 	
+	define('S3_BUCKET_NAME', 'sta-dw-s3b1');
+	
+	define('S3_ACCESS_KEY', 's3-access-key'); 
+ 	
+ 	define('S3_ACCESS_SECRET', 's3-access-secret'); 
+	
+	define('S3_URL', 'https://'.S3_BUCKET_NAME.'.s3.amazonaws.com/');
+	
+ 
+ 
+
+
+/*
+ *
+ *	0 = Disables logging, Error logging TURNED OFF
+ *	1 = Error Messages (including PHP errors)
+ *	2 = Debug Messages
+ *	3 = Informational Messages
+ *	4 = All Messages
+ *	The log file can be found in: [HOME_URL]application/logs/
+ *	Run >tail -n50 log-YYYY-MM-DD.php to view the errors being generated
+ */
+	define('LOG_ERROR_LEVEL', 0);
+
+
+			
+/*
+ *--------------------------------------------------------------------------
+ * URI PROTOCOL
+ *--------------------------------------------------------------------------
+ *
+ * The default setting of "AUTO" works for most servers.
+ * If your links do not seem to work, try one of the other delicious flavors:
+ *
+ * 'AUTO'	
+ * 'REQUEST_URI'
+ * 'PATH_INFO'	
+ * 'QUERY_STRING'
+ * 'ORIG_PATH_INFO'
+ *
+ */
+	
+	define('URI_PROTOCOL', 'AUTO'); // Set "AUTO" For WINDOWS
+									       // Set "REQUEST_URI" For LINUX
+
+	
+/*
+ *---------------------------------------------------------------
+ * DATABASE SETTINGS
+ *---------------------------------------------------------------
+ */
+
+	define('HOSTNAME', "192.168.88.243"); 	        
+	
+	define('USERNAME', "extlocaluser");
+	
+	define('PASSWORD', "3xtCl0ut");
+	
+	define('DATABASE', "clout_v1_3msg");
+	
+	define('DBDRIVER', "mysqli");
+	
+	define('DBPORT', "3306");
+
+	define('MEMCACHED_PERIOD', 10); # number of seconds data is cached before expiry
+
+	
+
+/*
+ *---------------------------------------------------------------
+ * MONGODB DATABASE SETTINGS
+ *---------------------------------------------------------------
+ */
+
+	define('MONGODB_ENABLE', FALSE);
+	
+	define('MONGODB_HOSTNAME', "192.168.88.243");	        
+	
+	define('MONGODB_USERNAME', "extlocaluser");
+	
+	define('MONGODB_PASSWORD', "3xtCl0ut");
+	
+	define('MONGODB_DATABASE', "cl");
+	
+	define('MONGODB_DBDRIVER', "mongodb");
+	
+	define('MONGODB_DBPORT', "27017");
+
+	
+
+/*
+ *---------------------------------------------------------------
+ * EMAIL SETTINGS
+ *---------------------------------------------------------------
+ */
+	define('SMTP_HOST', "localhost");
+	
+	define('SMTP_PORT', "25");
+	
+	define('SMTP_USER', "root"); 
+	
+	define('SMTP_PASS', "");
+	
+	define('FLAG_TO_REDIRECT', "0");// 1 => Redirect emails to a specific mail id, 
+									// 0 => No need to redirect emails.
+									
+	# SES settings
+	# ---------------------------------------------------------------
+	define('SES_ACCESS_KEY', "ses-access-key");
+	
+	define('SES_SECRET', "ses-key-secret");					
+
+?>
